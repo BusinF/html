@@ -13,12 +13,32 @@
 <center><h1><s1>Welcome to our BMI calculator:)</s1></h1></center>
 
 <!--Navigation-->
-<center><nav><navi>
+<nav><navi>
 <a href = "https://www.pythonanywhere.com/user/ihamataz/files/home/ihamataz/html/test.html">Home</a> |
-</navi></nav></center>
+<a href = "https://www.pythonanywhere.com/user/ihamataz/files/home/ihamataz/html/bmi.html">Wiederholen</a>
+</navi></nav>
 </body>
 
-<!--Da du Steve!!!!-->
+<!--Embed BMI-->
+<script type="text/javascript" src="https://form.jotformeu.com/jsform/53401876899370"></script>
+
+<!--Ergebnisse holen-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+//source file is https://docs.google.com/spreadsheet/ccc?key=0Ak0qDiMLT3XddHlNempadUs1djdkQ0tFLWF6ci1rUUE
+$(function listBooks() {
+$.getJSON( "https://docs.google.com/spreadsheets/d/1BaQY85lg23KXLzIbjDEnwAUQlLcxPNcpIoQsU5oGBEo/edit?usp=sharing",
+    function (data) {
+        $('div#bmi').append('<ul class="bmi"></ul>');
+        $.each(data.feed.entry, function(i,entry) {
+            var item = '<span style="display:none">' + entry.id.$t + '</span>';
+            $('.items').append('<li>' + item + '</span></li>');
+            });
+        });
+    });
+});
+</script>
 
 
 <!--Styles-->
