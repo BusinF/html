@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+
+
+<!--Head-->
+<head>
+<title>Gruppenmanagement</title>
+</head>
+
+<!--Title-->
+<body>
+<center><h1><s1>Gruppenmanagement</s1></h1></center>
+
+<!--Navigation-->
+<nav><navi>
+<a href = "https://www.pythonanywhere.com/user/ihamataz/files/home/ihamataz/html/test.html">Home</a>
+</navi></nav>
+</body>
+
+<!--Beschreib-->
+<p><center>Falls du am 17.05.16 kommen kannst bitte unten Eintragen damit Wir dich zur Party hinzufügen können</center></p>
+
+<!--Embed BMI-->
+<script type="text/javascript" src="https://form.jotformeu.com/jsform/60031384999362"></script>
+
+<!--Verarbeitung BMI-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+//source file is https://docs.google.com/spreadsheet/ccc?key=0Ak0qDiMLT3XddHlNempadUs1djdkQ0tFLWF6ci1rUUE
+$(function listBooks() {
+$.getJSON( "https://docs.google.com/spreadsheets/d/1pB9BYf4RIhM2YLL8i9Id1zoqZCJJBP8KtEheNHy2acI/edit?usp=sharing",
+    function (data) {
+        $('div#GM').append('<ul class="GM"></ul>');
+        $.each(data.feed.entry, function(i,entry) {
+            var item = '<span style="display:none">' + entry.id.$t + '</span>';
+            $('.items').append('<li>' + item + '</span></li>');
+            });
+        });
+    });
+});
+</script>
+
+
+<!--Styles-->
+<style>
+s1 {
+    display:block;
+    background-color:#ff0000;
+    color:white;
+    font-size:30px;
+}
+s2 {
+    background-color:#0000ff;
+    color:white;
+    font-size:20px;
+}
+s3 {
+    background-color:yellow;
+    color:blue;
+    font-size:20px;
+}
+navi {
+    display:block;
+    background-color:green;
+    font-size:30px;
+}
+<!--linkstyle-->
+a: {
+    color: black;
+    text-decoration:none;
+}
+a:link {
+    color: black;
+    text-decoration:none;
+}
+a:hover {
+   color: red;
+   text-decoration:underline;
+}
+a:active {
+    color: yellow;
+    font-weight: bold;
+    text-decoration:underline;
+}
+a:visited {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
