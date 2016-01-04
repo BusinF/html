@@ -22,13 +22,13 @@
 <!--Embed BMI-->
 <script type="text/javascript" src="https://form.jotformeu.com/jsform/53401876899370"></script>
 
-<!--Ergebnisse holen-->
+<!--Verarbeitung BMI-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 //source file is https://docs.google.com/spreadsheet/ccc?key=0Ak0qDiMLT3XddHlNempadUs1djdkQ0tFLWF6ci1rUUE
 $(function listBooks() {
-$.getJSON( "https://docs.google.com/spreadsheets/d/1BaQY85lg23KXLzIbjDEnwAUQlLcxPNcpIoQsU5oGBEo/edit?usp=sharing",
+$.getJSON( "https://docs.google.com/spreadsheets/d/1YSkEY81RWKLNTMMfwutIAdpcvabw0v5t9aWOyl5ST-U/edit?usp=sharing",
     function (data) {
         $('div#bmi').append('<ul class="bmi"></ul>');
         $.each(data.feed.entry, function(i,entry) {
